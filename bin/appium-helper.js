@@ -42,10 +42,10 @@ var run = require('../src/run').default
 
 var options = {
   appiumHost: program.appiumHost,
-  appiumPort: program.appiumPort,
+  appiumPort: +program.appiumPort,
   testsGlob: program.glob,
   appPath: program.app,
-  desiredCapabilities: program.desiredCapabilities,
+  capabilities: program.capabilities,
   platformName: program.platform,
   deviceName: program.deviceName,
   platformVersion: program.platformVersion,

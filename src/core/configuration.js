@@ -21,7 +21,7 @@ function readTestRC(filename, platform) {
 
 const environment = {
   appiumHost: env.APPIUM_HOST,
-  appiumPort: env.APPIUM_PORT,
+  appiumPort: +env.APPIUM_PORT,
   runner: env.RUNNER,
   deviceName: env.DEVICE_NAME,
   platformName: env.PLATFORM_NAME,
@@ -31,7 +31,7 @@ const environment = {
   androidDeviceName: env.ANDROID_DEVICE_NAME,
   androidPlatformVersion: env.ANDROID_PLATFORM_VERSION,
   appPath: env.APP_PATH,
-  desiredCapabilities: env.DESIRED_CAPABILITIES,
+  capabilities: env.CAPABILITIES,
   testsGlob: env.TESTS_GLOB,
   ignoreGlob: env.IGNORE_GLOB,
   noReset: env.NO_RESET,
