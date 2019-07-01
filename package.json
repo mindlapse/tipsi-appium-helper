@@ -44,7 +44,7 @@
     "imgur": "0.2.1",
     "lodash": "4.17.5",
     "mock-require": "3.0.2",
-    "node-simctl": "3.11.8",
+    "node-simctl": "5.0.2",
     "require-dir-all": "0.4.15",
     "resolve": "1.7.0",
     "semver-compare": "1.0.0",
@@ -59,6 +59,6 @@
     "nock": "9.2.5",
     "pmock": "0.2.3",
     "tape-plus": "1.0.0",
-    "webdriverio": "5.10.8"
+    "webdriverio": "5.10.9"
   }
 }
