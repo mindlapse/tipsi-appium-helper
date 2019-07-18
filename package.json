@@ -59,6 +59,6 @@
     "nock": "9.2.5",
     "pmock": "0.2.3",
     "tape-plus": "1.0.0",
-    "webdriverio": "4.2.16"
+    "webdriverio": "5.11.6"
   }
 }

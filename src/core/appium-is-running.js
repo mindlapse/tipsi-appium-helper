@@ -11,6 +11,7 @@ export default function appiumIsRunning(host, port) {
       if (res.statusCode !== 200) {
         return reject(new Error(`Appium is not running on: ${host}:${port}`))
       }
+      console.log(`Appium IS running on: ${host}:${port}`)
       return resolve()
     })
 

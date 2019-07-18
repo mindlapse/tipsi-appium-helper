@@ -16,6 +16,7 @@ class Helper {
     }
 
     this.config = config
+    console.log("config", config)
 
     const baseConfig = {
       desiredCapabilities: {
@@ -34,10 +35,15 @@ class Helper {
       port: config.appiumPort,
       connectionRetryTimeout: 1200000, // 20 min,
     }
+    console.log("baseConfig", baseConfig)
 
     const driverConfig = merge(baseConfig, config.driverConfigurations)
 
     this.driver = remote()
+
+    console.log("driver", driver)
+    console.log("driverConfig", driverConfig)
+
     await this.driver.init(driverConfig)
   }
 

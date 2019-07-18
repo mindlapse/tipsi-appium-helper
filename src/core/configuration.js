@@ -63,9 +63,10 @@ export function webDriverConfig(configFilePath) {
     try {
       const file = fs.readFileSync(configPath)
       const config = JSON.parse(file)
+      console.log(`Parsed config from ${configFilePath}`, config)
       return { ...config }
     } catch (error) {
-      throw new Error(`Unable to parse ${filename} file`)
+      throw new Error(`Unable to parse ${configFilePath} file`)
     }
   }
 
