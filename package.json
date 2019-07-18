@@ -22,14 +22,14 @@
     "ios",
     "android"
   ],
-  "author": "Tipsi",
+  "author",: "Tipsi",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tipsi/tipsi-appium-helper/issues"
   },
   "homepage": "https://github.com/tipsi/tipsi-appium-helper#readme",
   "peerDependencies": {
-    "webdriverio": ">= 4.2 < 5.0"
+    "webdriverio": "5.11.6"
   },
   "dependencies": {
     "adbkit": "2.11.0",
