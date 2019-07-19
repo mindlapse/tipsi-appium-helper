@@ -22,7 +22,7 @@
     "ios",
     "android"
   ],
-  "author",: "Tipsi",
+  "author": "Tipsi",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tipsi/tipsi-appium-helper/issues"
