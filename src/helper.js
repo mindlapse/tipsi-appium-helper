@@ -41,7 +41,7 @@ class Helper {
 
     this.driver = remote()
 
-    console.log("driver", driver)
+    console.log("driver", this.driver)
     console.log("driverConfig", driverConfig)
 
     await this.driver.init(driverConfig)
