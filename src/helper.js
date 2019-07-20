@@ -43,6 +43,8 @@ class Helper {
     try {
         console.log("driverConfig", driverConfig)
         this.driver = remote(driverConfig)
+        console.log("driver", this.driver)
+        await this.driver.init()
         console.log("driverAfterInit", this.driver)
     } catch (e) {
         console.log("Failed init", e)
