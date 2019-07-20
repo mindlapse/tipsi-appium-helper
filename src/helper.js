@@ -40,18 +40,18 @@ class Helper {
 
     const driverConfig = merge(baseConfig, config.driverConfigurations)
 
-    this.driver = remote()
-
-    console.log("driver", this.driver)
-    console.log("driverConfig", driverConfig)
-
     try {
-        await this.driver.init(driverConfig)
+        console.log("driverConfig", driverConfig)
+        this.driver = remote(driverConfig)
         console.log("driverAfterInit", this.driver)
     } catch (e) {
         console.log("Failed init", e)
         throw e
     }
+
+//    console.log("driver", this.driver)
+//    console.log("driverConfig", driverConfig)
+
   }
 
   release = async () => {
