@@ -33,6 +33,7 @@ class Helper {
       path: '/wd/hub',
       host: config.appiumHost,
       port: config.appiumPort,
+      logLevel: 'trace',
       connectionRetryTimeout: 1200000, // 20 min,
     }
     console.log("baseConfig", baseConfig)
@@ -44,7 +45,13 @@ class Helper {
     console.log("driver", this.driver)
     console.log("driverConfig", driverConfig)
 
-    await this.driver.init(driverConfig)
+    try {
+        await this.driver.init(driverConfig)
+        console.log("driverAfterInit", this.driver)
+    } catch (e) {
+        console.log("Failed init", e)
+        throw e
+    }
   }
 
   release = async () => {
