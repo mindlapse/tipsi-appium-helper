@@ -33,7 +33,6 @@ class Helper {
       path: '/wd/hub',
       host: config.appiumHost,
       port: config.appiumPort,
-      logLevel: 'trace',
       connectionRetryTimeout: 1200000, // 20 min,
     }
     console.log("baseConfig", baseConfig)
