@@ -10,6 +10,7 @@ import helper from './helper'
 /* eslint no-console: 0, no-param-reassign: 0*/
 export default async function run(config) {
   // Check Appium
+  console.log(`Waiting for appium to start running on ${config.appiumHost}:${config.appiumPort}`)
   await appiumIsRunning(
     config.appiumHost,
     config.appiumPort
@@ -17,6 +18,7 @@ export default async function run(config) {
   console.log(`Appium is running on: ${config.appiumHost}:${config.appiumPort}`)
 
   // Check Platform Name
+  console.log("config.platformName", config.platformName)
   if (!config.platformName) {
     throw new Error('Config: platformName is not specified')
   }
@@ -30,17 +32,21 @@ export default async function run(config) {
   }
   // Resolve APP file
   config.appPath = path.resolve(config.appPath)
+  console.log("config.appPath", config.appPath)
 
   if (config.tapeInit) {
     config.tapeInit = path.resolve(config.tapeInit)
   }
+  console.log("config.tapeInit", config.tapeInit)
 
   if (config.register) {
     config.register = path.resolve(config.register)
   }
+  console.log("config.register", config.register)
 
   if (config.testsGlob) {
     config.testsGlob = path.resolve(config.testsGlob)
+    console.log("config.testsGlob", config.testsGlob)
   }
 
   // Check Device name and Platform version

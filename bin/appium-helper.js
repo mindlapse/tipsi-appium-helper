@@ -67,6 +67,7 @@ if (config.register) {
 }
 
 run(config).catch((error) => {
+  console.log(error)
   console.log('-------------------------------------')
   console.log('Error while executing tests:')
   console.log()
